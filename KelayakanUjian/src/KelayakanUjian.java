@@ -32,6 +32,12 @@ public class KelayakanUjian{
 
         /*Berdasarkan hasil pengujian program, operator && (AND) memiliki prioritas (precedence) yang lebih tinggi dibandingkan operator || (OR). Jadi 'a' ditulis mengunakan tanpa tanda kurung sedangkan 'b' menggunakan tanda kurung*/
 
+        int cek = 0;
+        boolean x = (kehadiran >= 75) && (cek++ >= 0);
+        boolean y = (nilaiTugas >= 60) || (cek++ >= 0);
+        System.out.println("cek dipanggil : " + cek);
+        /*Kesimpulan: Karena kedua bagian kanan dilewati oleh mekanisme short-circuit, operasi post-increment (cek++) tidak pernah dieksekusi, sehingga nilai 'cek' tetap 0.*/
+
         scanner.close();
     }
 }
